@@ -1,10 +1,11 @@
+![Ignite Fleet](_docs/cover.jpg)
+
 # IGNITE FLEET
 
 Template para prosseguir com o curso de React Native: Projeto 06
 <!-- 
 ## 
 
-![Deliveroo](_docs/cover.jpg)
 
 ## Sobre o projeto
 
@@ -30,8 +31,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Expo](https://expo.io/)
 - [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [React Navigation](https://docs.expo.dev/routing/introduction/)
-- [Zustand](https://zustand-demo.pmnd.rs/)
+- [React Navigation](https://reactnavigation.org/)
+- [RealmDB](https://realm.io/)
 
 ## Pré-requisitos
 
