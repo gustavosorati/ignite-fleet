@@ -3,12 +3,13 @@ import { ThemeProvider } from 'styled-components/native';
 import { AppProvider, UserProvider } from "@realm/react"
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from "@expo-google-fonts/roboto"
 
-import { Home } from './src/screens/Home';
 import { SignIn } from './src/screens/SignIn';
 
 import THEME from './src/theme';
+import { env } from './src/env';
+import { Routes } from './src/routes';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import { REALM_APP_ID } from "@env"
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -21,17 +22,21 @@ export default function App() {
   }
 
   return (
-    <AppProvider id={REALM_APP_ID}>
-    <ThemeProvider theme={THEME}>
-      <StatusBar
-        barStyle="light-content" 
-        backgroundColor="transparent" 
-        translucent 
-      />
-      <UserProvider fallback={SignIn}>
-        <Home />
-      </UserProvider>
-    </ThemeProvider>
+    <AppProvider id={env.EXPO_PUBLIC_REALM_APP_ID}>
+      <ThemeProvider theme={THEME}>
+        <SafeAreaProvider>
+
+          <StatusBar
+            barStyle="light-content" 
+            backgroundColor="transparent" 
+            translucent 
+          />
+          <UserProvider fallback={SignIn}>
+            <Routes />
+          </UserProvider>
+        </SafeAreaProvider>
+
+      </ThemeProvider>
     </AppProvider>
   );
 }

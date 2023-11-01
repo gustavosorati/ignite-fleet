@@ -6,21 +6,29 @@ import { Power } from 'phosphor-react-native'
 import theme from '../../theme';
 
 import { useUser, useApp } from "@realm/react"
+import { DefaultUserProfileData } from 'realm';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+interface Profile extends DefaultUserProfileData {
+  name: string;
+  pictureurl: string;
+}
 
 export function HomeHeader() {
     const user = useUser();
     const app = useApp();
+    const insets = useSafeAreaInsets();
 
     async function handleLogout() {
-        app.currentUser?.logOut()
+      app.currentUser?.logOut()
     }
 
   return (
-    <Container>
-        <Picture
-            source={{ uri: user.profile.pictureUrl }}
-            placeholder='L184i9ofbHof00ayjsay~qj[ayj@'
-        />
+    <Container style={{ paddingTop: insets.top + 32 }}>
+      <Picture
+        source={{ uri: (user.profile as Profile).pictureurl }}
+        placeholder='L184i9ofbHof00ayjsay~qj[ayj@'
+      />
 
       <Greeting>
         <Message>

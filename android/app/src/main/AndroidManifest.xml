@@ -27,6 +27,7 @@
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="ignite-fleet"/>
         <data android:scheme="com.gustavosorati.ignite"/>
+        <data android:scheme="nlwcopa"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>

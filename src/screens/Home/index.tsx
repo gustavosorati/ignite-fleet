@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { SafeAreaView, Text, View } from "react-native";
 import { Realm, useApp } from "@realm/react"
 import { useEffect } from "react";
 import { Container } from "./styles";

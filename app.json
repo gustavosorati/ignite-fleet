@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "ignite-fleet",
-    "slug": "ignite-fleet",
-    "scheme": "ignite-fleet",
+    "name": "nlwcopa",
+    "slug": "nlwcopa",
+    "scheme": "nlwcopa",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,16 +15,16 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.gustavosorati.ignite"
-    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#202024"
       },
       "package": "com.gustavosorati.ignite"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gustavosorati.ignite"
     },
     "plugins": ["@react-native-google-signin/google-signin"],
     "web": {
